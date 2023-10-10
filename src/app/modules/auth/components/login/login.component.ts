@@ -31,11 +31,8 @@ export class LoginComponent {
     this.submitted = true
     if (this.loginForm.valid) {
       this.loadingNext = true;
-
       this.UserService.login({
-        username: this.loginForm.value.email, password: this.loginForm.value.password,
-
-
+        email: this.loginForm.value.email, password: this.loginForm.value.password,
       }).subscribe((item: any) => {
         localStorage.setItem('userDetails', JSON.stringify(item))
         this.router.navigate(['/dashboard']);

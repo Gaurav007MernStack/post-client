@@ -12,15 +12,15 @@ export class SignupComponent {
   showPassword: boolean = false;
   loadingNext: boolean = false;
 
-  public SignupForm:FormGroup;
-  submitted:boolean=false;
+  public SignupForm: FormGroup;
+  submitted: boolean = false;
   userdata: Object = {};
-  userlist: any=[];
+  userlist: any = [];
 
-  constructor(private router :Router, private UserService:UserserviceService){
-    if(localStorage.getItem('userlist')){
+  constructor(private router: Router, private UserService: UserserviceService) {
+    if (localStorage.getItem('userlist')) {
 
-      let x :any=  localStorage.getItem('userlist');
+      let x: any = localStorage.getItem('userlist');
       this.userlist = JSON.parse(x)
     }
 
@@ -34,24 +34,24 @@ export class SignupComponent {
   }
 
   OnSubmit() {
-      this.submitted =true
+    this.submitted = true
     if (this.SignupForm.valid) {
       this.loadingNext = true;
 
       this.UserService.register({
-            email : this.SignupForm.value.email,
-            username : this.SignupForm.value.username,
-            password : this.SignupForm.value.password,
+        email: this.SignupForm.value.email,
+        username: this.SignupForm.value.username,
+        password: this.SignupForm.value.password,
 
 
-    }).subscribe((item:any)=>{
-    })
-      this.SignupForm.reset()
-      this.router.navigate(['/'])
+      }).subscribe((data:any)=>{
+        this.SignupForm.reset()
+        this.router.navigate(['/'])
+        },
+        (error:any)=>{
+          this.UserService.toast.snackbarError("Email/UserName Should Be Unique");
+        }); 
     }
 
   }
-
-
-
 }
