@@ -1,3 +1,8 @@
+<img width="1434" alt="Screenshot 2023-10-10 at 7 54 21 PM" src="https://github.com/Gaurav007MernStack/post-client/assets/62373394/b136b8f5-e2f9-4a44-88eb-9c26e7456159">#Post Crud Project
+#Project Demo Link
+https://post-client-ea1d4.web.app
+
+
 # POC
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 16.1.3.
