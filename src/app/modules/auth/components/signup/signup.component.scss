@@ -61,9 +61,6 @@
                     border: 1px solid rgba(0, 0, 0, 0.2);
                     border-radius: 3px;
 
-                    &.pass-btn {
-                        padding-right: 52px;
-                    }
                 }
 
                 .eyeicon-box {
@@ -113,11 +110,18 @@
                 font-weight: 600;
                 font-size: 17px;
                 line-height: 26px;
-                margin: 18px 0 0 0;
+                // margin: 18px 0 0 0;
                 color: #ffffff;
             }
 
+            .button-group{
+                display: flex;
+                gap: 10px;
+                flex-wrap: wrap;
+                button{
 
+                }
+            }
         }
 
         @media screen and (max-width: 480px) {

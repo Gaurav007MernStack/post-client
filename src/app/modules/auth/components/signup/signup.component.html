@@ -4,33 +4,40 @@
       <div class="logo-bg-box">
       </div>
       <form [formGroup]="SignupForm" (ngSubmit)="OnSubmit();$event.stopPropagation();$event.preventDefault();">
-          <div class="login-bg-box">
-            <p class="login-text-value">
-                Sign Up
-            </p>
-            <div class="form-group form-padding">
-                <input formControlName="email" class="form-control email-btn form-field-bottom-margin" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Email">
-                <br>
-                <mat-error class="mat-error"  *ngIf="(SignupForm.controls['email'].touched || submitted) &&
-                SignupForm.controls['email'].errors && SignupForm.controls['email'].errors?.['required']">*This Field is Required</mat-error>
+        <div class="login-bg-box">
+          <p class="login-text-value">
+            Sign Up
+          </p>
+          <div class="form-group form-padding">
+            <input formControlName="email" class="form-control email-btn form-field-bottom-margin"
+              id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Email">
+            <br>
+            <mat-error class="mat-error" *ngIf="(SignupForm.controls['email'].touched || submitted) &&
+                SignupForm.controls['email'].errors && SignupForm.controls['email'].errors?.['required']">*This Field
+              is Required</mat-error>
 
 
-                <input formControlName="username" class="form-control email-btn form-field-bottom-margin" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="UserName">
-                <mat-error class="mat-error"  *ngIf="(SignupForm.controls['username'].touched || submitted) &&
-                SignupForm.controls['username'].errors && SignupForm.controls['username'].errors?.['required']">*This Field is Required</mat-error>
+            <input formControlName="username" class="form-control email-btn form-field-bottom-margin"
+              id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="UserName">
+            <mat-error class="mat-error" *ngIf="(SignupForm.controls['username'].touched || submitted) &&
+                SignupForm.controls['username'].errors && SignupForm.controls['username'].errors?.['required']">*This
+              Field is Required</mat-error>
 
-                <input style="width:358px" type="{{ showPassword ? 'text' : 'password' }}" formControlName="password" class="form-control email-btn pass-btn" id="exampleInputPassword1" placeholder="Password">
-                <mat-error class="mat-error"  *ngIf="(SignupForm.controls['password'].touched || submitted) &&
-                SignupForm.controls['password'].errors && SignupForm.controls['password'].errors?.['required']">*This Field is Required</mat-error>
+            <input type="{{ showPassword ? 'text' : 'password' }}" formControlName="password"
+              class="form-control email-btn pass-btn" id="exampleInputPassword1" placeholder="Password">
+            <mat-error class="mat-error" *ngIf="(SignupForm.controls['password'].touched || submitted) &&
+                SignupForm.controls['password'].errors && SignupForm.controls['password'].errors?.['required']">*This
+              Field is Required</mat-error>
 
 
-              </div>
+          </div>
 
-              <button class="btnpr" type="submit"
->
-Sign Up
-</button>
-<button class="btnpr" style="margin-left:20px" routerLink="/login">Already have Account? login</button>
+          <div class="button-group">
+            <button class="btnpr" type="submit">
+              Sign Up
+            </button>
+            <button class="btnpr" routerLink="/login">Already have Account? login</button>
+          </div>
 
         </div>
       </form>

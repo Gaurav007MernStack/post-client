@@ -32,8 +32,10 @@
           <ng-container matColumnDef="action">
             <th mat-header-cell *matHeaderCellDef>Action</th>
             <td mat-cell *matCellDef="let element">
-              <button class="margin-right-5 pointer" (click)="AddEdit('edit',element?._id)">Edit</button>
-              <button class="pointer" (click)="Delete(element)">Delete</button>
+             <div class="buttonWrapper">
+              <button class="pointer editBtn" (click)="AddEdit('edit',element?._id)">Edit</button>
+              <button class="pointer deleteBtn" (click)="Delete(element)">Delete</button>
+             </div>
             </td>
           </ng-container>
 

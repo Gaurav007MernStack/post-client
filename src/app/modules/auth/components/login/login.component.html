@@ -14,15 +14,17 @@
 
 
             <div class="eyeicon-box">
-              <img alt="" class="eye-icon" src="../../assets/img/{{showPassword ? 'Show' : 'Show_Hide'}}.svg"
-                (click)="showPassword = !showPassword" alt="show-hide" />
+              
               <mat-error class="mat-error" *ngIf="(loginForm.controls['email'].touched || submitted) &&
                 loginForm.controls['email'].errors && loginForm.controls['email'].errors?.['required']">*This Field is
                 Required</mat-error>
 
-
-              <input style="width:352px;" type="{{ showPassword ? 'text' : 'password' }}" formControlName="password"
+                <div class="position-relative" style="position: relative;">
+                  <img alt="" class="eye-icon" src="../../assets/img/{{showPassword ? 'Show' : 'Show_Hide'}}.svg"
+                (click)="showPassword = !showPassword" alt="show-hide" />
+              <input type="{{ showPassword ? 'text' : 'password' }}" formControlName="password"
                 class="form-control email-btn pass-btn" id="exampleInputPassword1" placeholder="Password">
+                </div>
               <mat-error class="mat-error" *ngIf="(loginForm.controls['password'].touched || submitted) &&
                 loginForm.controls['password'].errors && loginForm.controls['password'].errors?.['required']">*This
                 Field is Required</mat-error>

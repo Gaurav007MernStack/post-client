@@ -1,9 +1,16 @@
+.header-title{
+  p{
+    font-weight: 600;
+    font-size: 20px;
+    color: #4cb050;
+  }
+}
 .flex{
   display: flex;
   justify-content: flex-end;
   .add-post-btn {
     padding: 10px;
-    background-color: dodgerblue;
+    background-color: #4CAF50;
     color: white;
     border: navajowhite;
     cursor: pointer;
@@ -465,4 +472,23 @@
 }
 .pointer{
   cursor: pointer;
+}
+
+.buttonWrapper{
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  flex-direction: column;
+  button{
+    color: #ffffff;
+    padding: 5px 10px;
+      border-radius: 4px;
+      background: #4CAF50;
+      border-color: #4CAF50;
+    
+    &.deleteBtn{
+      background: red;
+      border-color: red;
+    }
+  }
 }
