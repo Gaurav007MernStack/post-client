@@ -32,6 +32,7 @@ export class DashboardComponent {
     'sno',
     'name',
     'email',
+    'author',
     'action'
   ];
   dataSource = new MatTableDataSource<any>([]);
