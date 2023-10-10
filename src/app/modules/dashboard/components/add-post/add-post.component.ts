@@ -5,17 +5,17 @@ import { MAT_DIALOG_DATA, MatDialogRef } from '@angular/material/dialog';
 import { UserserviceService } from 'src/app/service/user-service/userservice.service';
 
 @Component({
-  selector: 'app-add-employee',
-  templateUrl: './add-employee.component.html',
-  styleUrls: ['./add-employee.component.scss']
+  selector: 'app-add-post',
+  templateUrl: './add-post.component.html',
+  styleUrls: ['./add-post.component.scss']
 })
-export class AddEmployeeComponent {
+export class AddPostComponent {
   public AddEmployeeForm: FormGroup;
   submitted: boolean = false;
   Employee: any;
 
   constructor(private UserserviceService: UserserviceService,
-    public dialogRef: MatDialogRef<AddEmployeeComponent>,
+    public dialogRef: MatDialogRef<AddPostComponent>,
     @Inject(MAT_DIALOG_DATA) public data: any,
 
 

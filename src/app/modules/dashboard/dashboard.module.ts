@@ -9,7 +9,7 @@ import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { MatTableModule } from '@angular/material/table'
 import { MatPaginatorModule } from '@angular/material/paginator';
 import { SearchPipe } from 'src/app/search.pipe';
-import { AddEmployeeComponent } from './components/add-employee/add-employee.component';
+import { AddPostComponent } from './components/add-post/add-post.component';
 import { MatDialogModule } from '@angular/material/dialog';
 import { MatFormFieldModule } from '@angular/material/form-field';
 
@@ -18,7 +18,7 @@ import { MatFormFieldModule } from '@angular/material/form-field';
   declarations: [
     DashboardComponent,
     SearchPipe,
-    AddEmployeeComponent
+    AddPostComponent
   ],
   imports: [
     MatPaginatorModule,

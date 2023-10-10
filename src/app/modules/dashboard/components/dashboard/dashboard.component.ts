@@ -9,7 +9,7 @@ import * as fromRoot from 'src/app/app-state';
 import { Subject, takeUntil } from 'rxjs';
 import { SearchPipe } from 'src/app/search.pipe';
 import { MatDialog } from '@angular/material/dialog';
-import { AddEmployeeComponent } from '../add-employee/add-employee.component';
+import { AddPostComponent } from '../add-post/add-post.component';
 import { UserserviceService } from 'src/app/service/user-service/userservice.service';
 
 @Component({
@@ -87,7 +87,7 @@ export class DashboardComponent {
 
 
   AddEdit(value: string, item: any) {
-    const dialogRef = this.dialog.open(AddEmployeeComponent, {
+    const dialogRef = this.dialog.open(AddPostComponent, {
       width: '400px',
       data: { value, item },
     });
