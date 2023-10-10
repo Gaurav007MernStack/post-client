@@ -1,0 +1,56 @@
+<mat-drawer-container class="mat-drawer-container">
+  <mat-drawer-content class="dashboardcontainer">
+    <div class="d-flex">
+
+    </div>
+
+    <mat-drawer-content class="dashboardcontent">
+      <div>
+        <div class="flex">
+          <button class="btn add-post-btn" (click)="AddEdit('add',dataSource)">+ Post</button>
+        </div>
+        <div class="header-title">
+          <p>POST PAGE</p>
+        </div>
+
+        <table mat-table summary="table" [dataSource]="dataSource" class="mat-elevation-z8 " id="excel-table">
+
+          <ng-container matColumnDef="sno">
+            <th mat-header-cell *matHeaderCellDef> S.No </th>
+            <td mat-cell *matCellDef="let element; let i =index"> {{i+ 1}} </td>
+          </ng-container>
+          <ng-container matColumnDef="name">
+            <th mat-header-cell *matHeaderCellDef> Title </th>
+            <td mat-cell *matCellDef="let element"> {{element.title}} </td>
+          </ng-container>
+
+          <ng-container matColumnDef="email">
+            <th mat-header-cell *matHeaderCellDef>Content </th>
+            <td mat-cell *matCellDef="let element"> {{element.content}} </td>
+          </ng-container>
+
+          <ng-container matColumnDef="action">
+            <th mat-header-cell *matHeaderCellDef>Action</th>
+            <td mat-cell *matCellDef="let element">
+              <button class="margin-right-5 pointer" (click)="AddEdit('edit',element?._id)">Edit</button>
+              <button class="pointer" (click)="Delete(element)">Delete</button>
+            </td>
+          </ng-container>
+
+
+          <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
+          <tr mat-row *matRowDef="let row; columns: displayedColumns;"></tr>
+        </table>
+        <mat-paginator #paginator [pageSize]="pageSize" [pageSizeOptions]="pageSizeOptions" aria-label="Select page">
+        </mat-paginator>
+
+      </div>
+
+
+
+    </mat-drawer-content>
+
+  </mat-drawer-content>
+
+
+</mat-drawer-container>

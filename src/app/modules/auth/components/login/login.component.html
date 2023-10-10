@@ -1,0 +1,46 @@
+<div class="container-fluid p-0">
+  <div class="main-outer ">
+    <div class="form-bg-box">
+      <div class="logo-bg-box">
+      </div>
+      <form [formGroup]="loginForm" (ngSubmit)="OnSubmit();$event.stopPropagation();$event.preventDefault();">
+        <div class="login-bg-box">
+          <p class="login-text-value">
+            Login
+          </p>
+          <div class="form-group">
+            <input type="email" formControlName="email" class="form-control email-btn" id="exampleInputEmail1"
+              aria-describedby="emailHelp" placeholder="Email">
+
+
+            <div class="eyeicon-box">
+              <img alt="" class="eye-icon" src="../../assets/img/{{showPassword ? 'Show' : 'Show_Hide'}}.svg"
+                (click)="showPassword = !showPassword" alt="show-hide" />
+              <mat-error class="mat-error" *ngIf="(loginForm.controls['email'].touched || submitted) &&
+                loginForm.controls['email'].errors && loginForm.controls['email'].errors?.['required']">*This Field is
+                Required</mat-error>
+
+
+              <input style="width:352px;" type="{{ showPassword ? 'text' : 'password' }}" formControlName="password"
+                class="form-control email-btn pass-btn" id="exampleInputPassword1" placeholder="Password">
+              <mat-error class="mat-error" *ngIf="(loginForm.controls['password'].touched || submitted) &&
+                loginForm.controls['password'].errors && loginForm.controls['password'].errors?.['required']">*This
+                Field is Required</mat-error>
+            </div>
+            <span style="color: red;" *ngIf="message && loginForm.value.password">{{message}}</span>
+
+
+          </div>
+
+          <button type="submit" class="primarybtn">
+            Login
+          </button>
+          <button class="primarybtn
+" style="margin-left:10px" routerLink="/sign-up">Register</button>
+
+        </div>
+      </form>
+    </div>
+
+  </div>
+</div>

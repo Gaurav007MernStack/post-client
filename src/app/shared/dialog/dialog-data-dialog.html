@@ -1,0 +1,10 @@
+<div class="container">
+
+  <h2 mat-dialog-title>{{data.title}}</h2>
+  <mat-dialog-content>{{data.content}}</mat-dialog-content>
+  <mat-dialog-actions >
+    <button mat-raised-button class="btn btn-no" mat-dialog-close>No</button>
+    <button mat-raised-button class="btn btn-theme" [mat-dialog-close]="true">Yes</button>
+  </mat-dialog-actions>
+  
+</div>

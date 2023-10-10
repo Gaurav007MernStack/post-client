@@ -1,0 +1,34 @@
+* {box-sizing: border-box;}
+
+body {
+  margin: 0;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+.header {
+  overflow: hidden;
+  background-color: #f1f1f1;
+  padding: 20px 10px;
+}
+
+.header a.logo {
+  font-size: 25px;
+  font-weight: bold;
+}
+
+.header-right {
+  float: right;
+}
+.pointer{
+  cursor: pointer;
+}
+.logout{
+  display: flex;
+  justify-content: end;
+}
+
+@media screen and (max-width: 500px) {
+  .header-right {
+    float: none;
+  }
+}
